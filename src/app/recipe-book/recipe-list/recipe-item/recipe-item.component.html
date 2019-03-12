@@ -1,3 +1,13 @@
 <p>
   recipe-item works!
+
+
+  
 </p>
+<form #mainForm="ngForm" (ngSubmit)="onSubmit()">
+  <input class="form-control" type="text" ngModel name="name" required>
+
+  <input type="submit" class="btn btn-primary" [disabled]="!mainForm.valid">
+</form>
+
+<form ></form>

@@ -7,10 +7,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="recipe/22">Recipes <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Shopping List</a>
+        <a class="nav-link" routerLink="shopping">Shopping List</a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -28,3 +28,11 @@
     </ul>
   </div>
 </nav>
+
+<div>
+    <h1>Counting Down From {{ countDown }}!</h1>
+    <h2 *ngIf="!countCompleted">{{ count$ | async}}</h2>
+    <h2 *ngIf="countCompleted">{{ message }}</h2>
+    <h2> {{ otherCounter$ | async }}</h2>
+    <h1> {{ globalURL }}</h1>
+</div>
